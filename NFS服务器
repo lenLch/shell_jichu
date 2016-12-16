@@ -1,0 +1,30 @@
+网络文件系统NFS  hostname   主机名   /srv/homes 共享目录
+NFS客户端 NFS服务端 
+dpkg -s nfs-kernel-server   检查NFS服务器的安装状态
+service nfs-kernel-server start 开启客户端
+service ...........       restart 重启客户端
+service ...........       stop   关闭客户端
+
+修改nfs 环境变量
+sudo vi /etc/exports 
+在最后一行加入/nfs_root_dir   *(rw,sync,no_subtree_check,no_root_squash)
+在/目录下创建 nfs_root_dir目录
+修改权限chomd 777 nfs_root_dir
+
+测试
+mkdir /mout-nfs    创建一个挂载目录
+mount -t nfs 192.168.1.100:/nfs_root_dir     /mout-nfs   客户端挂载远程服务器
+
+umount 挂载目录名       卸载挂载
+
+
+修改环境变量
+sudo vi /etc/exports 
+在最后一行加入/nfs_root_dir  *(rw,sync,no_subtree_check,no_root_squash)
+在/目录下创建nfs_root_dir目录下创建
+
+sudo service nfs-kernel-server start  开启客户端
+sudo service nfs-kernel-server restart  重启客户端
+sudo service 。 。 。 。 。 。 stop    关闭客户端
+mount -t nfs ip地址:/被挂载目录   挂载目录名
+umount 挂载目录                   取消挂载

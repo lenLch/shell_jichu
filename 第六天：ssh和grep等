@@ -1,0 +1,44 @@
+远程安全登录服务器SSH  
+http 应用层协议 https 加密
+安装openssh-server（ssh） 服务端  openssh-client（sshd） 客户端
+
+permitrootlogin yes 最高权限登录别人服务器
+带#的是注释  去掉就可以使用
+
+修改ssh服务器的配置文件 /etc/ssh/sshd_config
+port   设施sshd监听口
+ListenAddress 设置sshd服务器绑定的IP地址
+HostKey 设置包含计算机私人密匙的文件
+ServerKeyBits 定义服务器密匙的位数
+LoginGraceTime
+设置如果用户不能登录，在切断连接之前服务器需要等待的时间（以秒为单位）
+KeyRegenerationInterval
+设置在多少秒之后自动重新生成服务器的密匙（如果使用密匙）。重生密匙
+PermiRootLogin 设置root能不能用ssh登录。选择yes 最高权限登录他人计算机 危险
+X11Forwarding 设置是否允许X11转发
+
+sudo service sshd start  启动服务
+sudo service sshd restast 重启服务
+sudo service sshd stop   
+ssh 用户名@ip地址或主机名  远程登录别人服务器
+scp 文件名 用户名@ip地址或主机名:  复制自己文件到别人用户主目录
+scp -r 用户名@ip地址或主机名:/路径/文件名 . 复制别人目录到自己目录
+
+
+ps ajx | grep 想查找内容  得到想找内容的编号
+wc    输出行的个数 单词个数 字节的个数
+ls | wc   输出目录下文件   -l  就输出文件个数
+wc  文件名 输出文件的  行数 单词数  字节个数
+grep 关键字 文件名  查找关键字
+grep -n 关键字 文件名 找到关键字并显示行号
+grep -R -n 关键字 .    查找当前目录中包括子目录的所有关键字
+
+tree 目录名            以树状显示目录
+
+ll  列出当前目录下文件的详细信息（不是所有系统都通用）
+
+vi know_hosts    列出以前别人连接过自己的主机名
+
+ 
+
+

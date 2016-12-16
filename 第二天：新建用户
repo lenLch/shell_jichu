@@ -1,0 +1,20 @@
+home 目录下都是普通用户
+root 超级用户
+etc目录下放的都是配置文件
+exit 退出root
+liunx组的分类：1 主组 2 附属组 （相当于学校和兴趣班的区别）
+vi /ect/passwd  查看用户配置信息 包括密码
+vi /etc/group  	查看分组信息
+usermod  修改用户 
+sudo adduser username  常见一个新的用户
+useradd -s /bin/bash -m -g username 然后设置密码 sudo passed username
+创建用户的另一个方法
+su username  登录另一个用户
+addgroup 增加组 ingroup  指定的组  delgroup 删除组
+sudo userrmod -s /bin/bash -G group1,group2 username   更改用户组
+sudo gpasswd -a username groupname    添加一个用户到一个组
+sudo gpasswd -d username groupname    删除组中的用户
+sudo passwd  username  修改用户密码
+sudo passwd  root      修改root密码
+sudo deluser username  删除一个用户不删除目录
+sudo deluser username --remove-home  删除组中的用户连同目录一起删除

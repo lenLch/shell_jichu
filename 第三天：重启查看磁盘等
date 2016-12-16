@@ -1,0 +1,32 @@
+hutdown  df du ps  top kill   
+shutdown -r new或（+数字）  立即重启   数字时间后重启
+shupdown -h new或（+数字）  立即关机   数字时间后关机
+shupdown -k 通知其他用户我要关机 
+shutdowm -c 取消关机命令
+
+df -a       查看所有磁盘空间
+df -h       人类可读的方式查磁盘空间 （常用）
+df -T       查看使用了多少空间 
+df -aTh     可以连起来使用
+du -h 文件名  查看文件占用磁盘的大小  大于等于文件大小 人类可读的方式     
+du -sh 目录名  查看目录大小
+
+ps            显示当前所有运行的程序的快照
+ps -ajx        列出当前系统上正在运行的前台和后台的数据  带+的是前台运行的
+ps -aux      比ajx多了一个用户  
+pstree       产生一个进程树
+top           （动态）列出所有进程的cpu和内存的使用情况 shift+<> 换页   q 退出
+kill -9 pid    杀死pid号的进程   kill -9 -1 杀死一切进程 
+
+/etc/apt/sources.list,  包含dbd软件包源文件
+/var/lib/apt/list/*     对软件源进行更新之后的本地文件  
+/var/cache/apt/archive  在线安装时软件包的下载目录
+/var/log/apt/*.log      本地软件包管理的日志文件
+/var/log/apt/*.log      在线软件包管理的日志文件
+程序         静态的 存储在磁盘上的
+进程         处于运行状态的程序 
+磁盘是存储数据的  内存是运行程序的 
+
+
+
+  

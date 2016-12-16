@@ -1,0 +1,10 @@
+apache     web服务器的应用软件  
+ping 可以输入地址或者域名  检测网络有没有网
+安装 apache
+安装 tasksel 
+输入 tasksel 
+找到 LAMP server 安空格键选中 
+/etc  配置文件目录
+/etc/apache2/ 
+/var/www    
+
